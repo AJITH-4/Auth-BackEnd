@@ -32,11 +32,11 @@ let validate = async (req,res,next)=>{
        if((Math.round((+new Date()/1000)))<exp){
           next()}
         else{
-           res.status(400).send({message:"Token Expired"})
+           res.status(401).send({message:"Token Expired"})
         }
     }
     else{
-        res.status(400).send({message:"Token Not Found"})   
+        res.status(401).send({message:"Token Not Found"})   
     }
 }
     
@@ -49,11 +49,11 @@ let adminGaurd = async (req,res,next)=>{
        if(role==="admin"){
           next()}
         else{
-           res.status(400).send({message:"Only Admin Can Access"})
+           res.status(401).send({message:"Only Admin Can Access"})
         }
     }
     else{
-        res.status(400).send({message:"Token Not Found"})   
+        res.status(401).send({message:"Token Not Found"})   
     }
 }
 

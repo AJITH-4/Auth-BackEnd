@@ -11,7 +11,7 @@ mongoose.connect(dbUrl)
 router.get('/',async(req,res)=>{
     res.send(`
     <h2>Available Routes</h2>
-    <div>Get all</div>
+    <div>user/all</div>
     <div>user/:id</div>
     <div>user/Signup</div>
     <div>user/Signin</div>
